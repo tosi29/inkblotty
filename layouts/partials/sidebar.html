@@ -3,9 +3,9 @@
     <aside class="widget widget_categories">
         <h2>Categories</h2>
         <ul class="widget__list">
-            {{- range $name, $items := .Site.Taxonomies.categories }}
+            {{- range $name, $items := .Site.Taxonomies.categories -}}
             <li class="cat-item cat-item-2">
-                <a href="{{ " categories/ " | relLangURL }}{{ $name | urlize | lower }}">{{ $name | title }} ({{ $items.Count }})</a>
+                <a href="{{- "categories/" | relLangURL -}}{{- $name | urlize | lower -}}">{{ $name | title }} ({{ $items.Count }})</a>
             </li>
             {{- end }}
         </ul>
@@ -14,8 +14,8 @@
     <aside class="widget widget_tag_cloud">
         <h2>Tags</h2>
         <div class="tagcloud">
-            {{- range $name, $items := .Site.Taxonomies.tags }}
-            <a class="tag-cloud-link" href="{{ " tags/ " | relLangURL }}{{ $name | urlize | lower }}" title="{{ $name }}" style="font-size: 12pt;">{{ $name }} </a>
+            {{- range $name, $items := .Site.Taxonomies.tags -}}
+            <a class="tag-cloud-link" href="{{- "tags/" | relLangURL -}}{{- $name | urlize | lower -}}" title="{{ $name }}" style="font-size: 12pt;">{{ $name }} </a>
             {{- end }}
         </div>
     </aside>
@@ -35,8 +35,8 @@
     <aside class="widget widget_archive">
         <h2>Archives</h2>
         <ul>
-            {{- range $name, $items := .Site.Taxonomies.yearmonth }}
-            <li><a href='{{ " month/ " | relLangURL }}{{ $name | urlize | lower }}'>{{ $name | title }}</a> ({{ $items.Count }})</li>
+            {{- range $name, $items := .Site.Taxonomies.yearmonth -}}
+            <li><a href='{{- "month/" | relLangURL -}}{{- $name | urlize | lower -}}'>{{ $name | title }}</a> ({{ $items.Count }})</li>
             {{- end }}
         </ul>
     </aside>
