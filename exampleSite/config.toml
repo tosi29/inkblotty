@@ -1,0 +1,26 @@
+baseURL = "/"
+title = "Inkblotty"
+author = "Author"
+paginate = 10
+
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+hasCJKLanguage = "true"
+
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+
+disqusShortname = ""
+
+summaryLength=150
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+[Params]
+  readmore = true
+
+
