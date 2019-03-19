@@ -1,0 +1,38 @@
+<a href="#content">Skip to content</a>
+<div class="wrapper">
+    <header role="banner" class="banner widgets columns-1">
+        <a href="/" rel="home">
+            <h1 class="site">{{ .Site.Title }}</h1>
+            <p></p>
+        </a>
+        {{- if .Site.Menus.main }}
+        <nav role="navigation" aria-label="Primary Navigation">
+
+            <ul class="menu">
+                {{- $currentNode := . }}
+                {{- range sort .Site.Menus.main }}
+                {{- if .Name}}
+                <li class="menu-item {{if eq $currentNode.URL .URL }} current-menu-item current_page_item {{end}}"><a class="menu__link" href="{{ .URL }}">{{ .Name | upper }}</a></li>
+                {{- end }}
+                {{- end }}
+            </ul>
+            <select>
+                {{- $currentNode := . }}
+                {{- range sort .Site.Menus.main }}
+                {{- if .Name}}
+                <option value="{{ .URL }}" class="menu-item menu-item-type-custom menu-item-object-custom" {{if eq $currentNode.URL .URL }} selected="selected" {{end}}>{{ .Name | upper }}</option>
+                {{- end }}
+                {{- end }}
+            </select>
+        </nav>
+        {{- end }}
+    </header>
+
+    <br>
+    <div style="width: 100%; max-height: 100px; text-align: center;">
+       
+    </div>
+
+    <div class="breadcrumbs">
+        
+    </div>

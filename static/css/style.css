@@ -1,0 +1,1296 @@
+@charset "UTF-8";
+/*
+Theme Name: Inkblot
+Theme URI: https://github.com/mgsisk/inkblot
+Author: Michael Sisk
+Author URI: http://mgsisk.com
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl.html
+Version: 4.5.2
+Description: Elegant, fully responsive, highly customizable Webcomic-ready theme named in honor of Rorschach from the Watchmen graphic novel.
+Tags: black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, flexible-header, responsive-layout, accessibility-ready, blavatar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+Text Domain: inkblot
+Webcomic: 4.3
+*/
+/**
+ * ===== PLEASE READ THIS ======================================================
+ * You can make most common style modifications – including adding custom CSS –
+ * using the Customizer. If you want to make extensive theme modifications you
+ * should create a child theme.
+ * =============================================================================
+ */
+@font-face {
+  font-family: 'awesome';
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot");
+  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff") format("woff"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf") format("truetype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg"); }
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button, input[type="submit"], input[type="reset"], input[type="button"],
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button, input[type="submit"], input[type="reset"], input[type="button"] {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button, input[type="submit"], input[type="reset"], input[type="button"],
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button, input[type="submit"], input[type="reset"], input[type="button"],
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled], input[disabled][type="submit"], input[disabled][type="reset"], input[disabled][type="button"],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+html {
+  font: 100%/1.4 'helvetica neue', helvetica, sans-serif; }
+
+body {
+  background: #fff;
+  box-sizing: border-box;
+  color: #000;
+  padding: 1rem;
+  text-rendering: optimizeLegibility; }
+
+*,
+*:before,
+*:after,
+input[type="search"] {
+  box-sizing: inherit; }
+  @media print {
+    *,
+    *:before,
+    *:after,
+    input[type="search"] {
+      background: transparent !important;
+      color: #000 !important;
+      box-shadow: none !important;
+      text-shadow: none !important; } }
+
+a {
+  color: #767676;
+  text-decoration: none;
+  transition: color .2s, opacity .2s, outline .2s; }
+  a:focus, a:hover {
+    color: #000; }
+  a:focus {
+    outline: thin dotted;
+    outline-offset: .3rem; }
+  a:active {
+    opacity: 0.4; }
+  @media print {
+    a[href]:after {
+      content: " (" attr(href) ")"; } }
+  @media print {
+    a[href^="javascript:"]:after, a[href^="#"]:after {
+      content: ""; } }
+  a:not([href]) {
+    cursor: default; }
+  @media print {
+    a {
+      text-decoration: underline; } }
+
+abbr[title] {
+  cursor: help; }
+  @media print {
+    abbr[title]:after {
+      content: " (" attr(title) ")"; } }
+
+address {
+  font-style: normal; }
+
+blockquote {
+  border: thin solid #767676;
+  padding: 0 1rem; }
+  blockquote blockquote {
+    margin: 0 0 1rem; }
+  @media print {
+    blockquote {
+      page-break-inside: avoid; } }
+
+dt {
+  font-weight: bold; }
+
+@media print {
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+    page-break-after: avoid; } }
+
+hr {
+  border: 0;
+  border-top: thin solid #767676;
+  clear: both;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+ol {
+  list-style: decimal; }
+  ol ol {
+    list-style: lower-alpha; }
+    ol ol ol {
+      list-style: lower-roman; }
+
+nav ul,
+nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+@media print {
+  p {
+    orphans: 3;
+    widows: 3; } }
+
+pre {
+  border: thin solid #767676;
+  padding: 1rem;
+  word-wrap: normal; }
+  @media print {
+    pre {
+      page-break-inside: avoid; } }
+
+table {
+  max-width: 100%;
+  margin: 1rem 0; }
+
+@media print {
+  thead {
+    display: table-header-group; } }
+
+@media print {
+  tr {
+    page-break-inside: avoid; } }
+
+th,
+td {
+  border: thin solid #767676;
+  padding: .5rem; }
+
+ul {
+  list-style: disc; }
+  ul ul {
+    list-style: square; }
+    ul ul ul {
+      list-style: circle; }
+
+audio,
+canvas,
+embed,
+iframe,
+img,
+object,
+svg,
+video {
+  max-width: 100%;
+  vertical-align: middle; }
+
+img,
+video {
+  height: auto; }
+  @media print {
+    img,
+    video {
+      page-break-inside: avoid; } }
+
+fieldset {
+  border: thin solid #767676; }
+
+label[for] {
+  cursor: pointer; }
+
+input {
+  background: #fff;
+  border: thin solid #767676;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #000;
+  line-height: 1.8;
+  max-width: 100%;
+  padding: 0 .5rem;
+  transition: border-color .2s, box-shadow .2s; }
+  input:focus, input:hover {
+    border-color: #000; }
+  input:focus {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    outline: 0; }
+  input[type="search"] {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  input[type="radio"], input[type="checkbox"] {
+    background: none;
+    border: 0;
+    line-height: 1;
+    padding: 0; }
+  label + input {
+    display: block; }
+
+select {
+  max-width: 100%; }
+  select:focus {
+    outline: thin dotted;
+    outline-offset: .1rem; }
+
+textarea {
+  background: #fff;
+  border: thin solid #767676;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #000;
+  height: 10rem;
+  line-height: 1.4;
+  max-width: 100%;
+  padding: .5rem;
+  resize: vertical;
+  transition: border-color .2s, box-shadow .2s;
+  width: 100%; }
+  textarea:focus, textarea:hover {
+    border-color: #000; }
+  textarea:focus {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    outline: 0; }
+
+button, input[type="submit"], input[type="reset"], input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  border: 0;
+  border-radius: .3rem;
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  line-height: 1.8;
+  padding: 0 .5rem;
+  transition: background-color .2s, box-shadow .2s; }
+  button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover,
+  input[type="reset"]:focus,
+  input[type="reset"]:hover,
+  input[type="submit"]:focus,
+  input[type="submit"]:hover,
+  input[type="button"]:focus,
+  input[type="button"]:hover {
+    background: #767676; }
+  button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus,
+  input[type="reset"]:focus,
+  input[type="submit"]:focus,
+  input[type="button"]:focus {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    outline: 0; }
+  button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active,
+  input[type="reset"]:active,
+  input[type="submit"]:active,
+  input[type="button"]:active {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2) inset; }
+
+body > a[href="#content"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  body > a[href="#content"]:focus, body > a[href="#content"]:active {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+  body > a[href="#content"]:focus, body > a[href="#content"]:hover {
+    display: block;
+    padding: 1rem;
+    text-align: center; }
+
+.document-header,
+.document-footer {
+  margin: auto; }
+
+.wrapper {
+  background: #fff;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  margin: auto;
+  padding: 1px;
+  position: relative; }
+  .wrapper a {
+    color: #767676; }
+    .wrapper a:focus, .wrapper a:hover {
+      color: #000; }
+
+.content {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-flex;
+  display: flex;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .content:before, .content:after {
+    content: ' ';
+    display: table; }
+  .content:after {
+    clear: both; }
+  .content:focus {
+    outline: 0; }
+  .content-footer {
+    -moz-order: 99;
+    -ms-order: 99;
+    -o-order: 99;
+    -webkit-order: 99;
+    order: 99; }
+
+main,
+.sidebar1,
+.sidebar2,
+.sidebar3 {
+  display: none;
+  padding: 1rem; }
+
+main {
+  display: block; }
+
+.sidebar1 {
+  -moz-order: 20;
+  -ms-order: 20;
+  -o-order: 20;
+  -webkit-order: 20;
+  order: 20; }
+
+.sidebar2 {
+  -moz-order: 40;
+  -ms-order: 40;
+  -o-order: 40;
+  -webkit-order: 40;
+  order: 40; }
+
+.sidebar3 {
+  -moz-order: 60;
+  -ms-order: 60;
+  -o-order: 60;
+  -webkit-order: 60;
+  order: 60; }
+
+.two-column.content-right main {
+  -moz-order: 30;
+  -ms-order: 30;
+  -o-order: 30;
+  -webkit-order: 30;
+  order: 30; }
+.two-column .sidebar1 {
+  display: block; }
+
+.three-column.content-center main {
+  -moz-order: 30;
+  -ms-order: 30;
+  -o-order: 30;
+  -webkit-order: 30;
+  order: 30; }
+.three-column.content-right main {
+  -moz-order: 50;
+  -ms-order: 50;
+  -o-order: 50;
+  -webkit-order: 50;
+  order: 50; }
+.three-column .sidebar1,
+.three-column .sidebar2 {
+  display: block; }
+
+.four-column.content-left main {
+  -moz-order: 30;
+  -ms-order: 30;
+  -o-order: 30;
+  -webkit-order: 30;
+  order: 30; }
+.four-column.content-right main {
+  -moz-order: 50;
+  -ms-order: 50;
+  -o-order: 50;
+  -webkit-order: 50;
+  order: 50; }
+.four-column.content-far-right main {
+  -moz-order: 70;
+  -ms-order: 70;
+  -o-order: 70;
+  -webkit-order: 70;
+  order: 70; }
+.four-column .sidebar1,
+.four-column .sidebar2,
+.four-column .sidebar3 {
+  display: block; }
+
+.banner {
+  position: relative; }
+  .banner > a {
+    color: #000;
+    display: block;
+    line-height: 1.4;
+    padding: 0;
+    white-space: normal; }
+    .banner > a:focus, .banner > a:hover {
+      color: #000;
+      opacity: 0.8; }
+    .banner > a:active {
+      opacity: 0.4; }
+  .banner h1 {
+    line-height: 1;
+    margin: 0;
+    padding: 1rem 1rem 0 1rem; }
+  .banner p {
+    line-height: 2;
+    margin: 0;
+    padding: 0 1rem 1rem 1rem; }
+  .banner nav {
+    background: #000;
+    color: #fff;
+    position: relative; }
+    .banner nav:before, .banner nav:after {
+      content: ' ';
+      display: table; }
+    .banner nav:after {
+      clear: both; }
+    .banner nav:before {
+      display: none;
+      visibility: hidden;
+      font: 100%/1 awesome;
+      content: '\f0c9';
+      line-height: 2.4;
+      pointer-events: none;
+      position: absolute;
+      right: 1rem;
+      top: 0; }
+    .banner nav a {
+      color: #767676;
+      display: block;
+      line-height: 2.4;
+      padding: 0 1rem;
+      white-space: pre; }
+      .banner nav a:focus, .banner nav a:hover {
+        color: #fff; }
+  .banner ul {
+    list-style: none;
+    transition: opacity .2s, visibility .2s; }
+    .banner ul ul {
+      background: #000;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+      color: #fff;
+      opacity: 0;
+      position: absolute;
+      visibility: hidden;
+      z-index: 99; }
+      .banner ul ul ul {
+        left: 100%;
+        top: 0; }
+  .banner li {
+    float: left;
+    position: relative; }
+    .banner li.open > ul, .banner li:focus > ul, .banner li:hover > ul {
+      opacity: 1;
+      visibility: visible; }
+    .banner li:focus > a, .banner li:hover > a, .banner li.current-menu-item > a, .banner li.current_page_item > a, .banner li.current_page_ancestor > a, .banner li.current-menu-ancestor > a {
+      color: #fff; }
+  .banner .menu-item-has-children > a:after,
+  .banner .page_item_has_children > a:after {
+    font: 100%/1 awesome;
+    content: '\f13a';
+    margin: 0 0 0 .5rem; }
+  .banner .menu-item-has-children .menu-item-has-children > a:after,
+  .banner .menu-item-has-children .page_item_has_children > a:after,
+  .banner .page_item_has_children .menu-item-has-children > a:after,
+  .banner .page_item_has_children .page_item_has_children > a:after {
+    content: '\f138'; }
+  .banner select {
+    display: none;
+    visibility: hidden;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #000;
+    border: 0;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    line-height: 2.4;
+    padding: 0 1rem; }
+
+.contentinfo {
+  background: #000;
+  color: #fff;
+  line-height: 1;
+  padding: 1rem; }
+  .contentinfo a {
+    color: #767676; }
+    .contentinfo a:focus, .contentinfo a:hover {
+      color: #fff; }
+
+form.search input {
+  width: 100%; }
+
+.widgets:before, .widgets:after {
+  content: ' ';
+  display: table; }
+.widgets:after {
+  clear: both; }
+.widgets aside {
+  float: left;
+  word-wrap: break-word; }
+  .widgets aside h2 {
+    font-size: 100%;
+    margin: 1rem 0; }
+.widgets.columns-1 aside {
+  float: none; }
+.widgets.columns-2 aside {
+  width: 50%; }
+.widgets.columns-3 aside {
+  width: 33%; }
+.widgets.columns-4 aside {
+  width: 25%; }
+.widgets.columns-5 aside {
+  width: 20%; }
+.widgets.columns-6 aside {
+  width: 16%; }
+.widgets.columns-7 aside {
+  width: 14%; }
+.widgets.columns-8 aside {
+  width: 12%; }
+.widgets.columns-9 aside {
+  width: 11%; }
+.widgets.columns-10 aside {
+  width: 10%; }
+
+.first-post {
+  display: block;
+  font-size: larger;
+  margin: 1rem;
+  text-align: center; }
+  .first-post:after, .first-post:before {
+    font: 100%/1 awesome;
+    content: '';
+    padding: 0 1rem; }
+
+.post-webcomic {
+  width: 100%; }
+  .post-webcomic nav {
+    background: #000;
+    color: #fff;
+    text-align: center; }
+    .post-webcomic nav.above {
+      margin: 1px 0 0; }
+    .post-webcomic nav a {
+      color: #767676;
+      font-size: 200%; }
+      .post-webcomic nav a:focus, .post-webcomic nav a:hover {
+        color: #fff; }
+      .post-webcomic nav a.current-webcomic {
+        opacity: 0.2; }
+  .post-webcomic .webcomic-image {
+    overflow: auto;
+    text-align: center; }
+    .post-webcomic .webcomic-image.scroll img {
+      max-width: none; }
+.post-image {
+  float: right;
+  margin: 0 0 1rem 1rem; }
+  .post-image img {
+    border-radius: .3rem; }
+.post-header h1,
+.post-header h2 {
+  margin: 0;
+  word-wrap: break-word; }
+.post-header h2 a:before {
+  font: 100%/1 awesome;
+  padding: 0 .5rem 0 0;
+  vertical-align: baseline; }
+  .format-audio .post-header h2 a:before {
+    content: '\f025'; }
+  .format-image .post-header h2 a:before, .format-gallery .post-header h2 a:before {
+    content: '\f03e'; }
+  .format-video .post-header h2 a:before {
+    content: '\f03d'; }
+  .format-aside .post-header h2 a:before {
+    content: '\f036'; }
+  .format-status .post-header h2 a:before {
+    content: '\f141'; }
+  .format-link .post-header h2 a:before {
+    content: '\f08e'; }
+  .format-quote .post-header h2 a:before {
+    content: '\f10d'; }
+  .format-chat .post-header h2 a:before {
+    content: '\f0e6'; }
+  .sticky .post-header h2 a:before {
+    content: '\f192'; }
+.post-details {
+  font-size: smaller; }
+  .post-details a {
+    margin: 0 0 0 1rem; }
+    .post-details a:first-child {
+      margin: 0; }
+    .post-details a:before {
+      font: 100%/1 awesome;
+      padding: 0 .3rem 0 0; }
+    .post-details a[rel="author"]:before {
+      content: '\f007'; }
+    .post-details a[rel="bookmark"]:before {
+      content: '\f133'; }
+    .post-details a[rel="gallery"]:before {
+      content: '\f00a'; }
+    .post-details a[href*="#comments"]:before, .post-details a[href*="#respond"]:before, .post-details a[href*="#disqus"]:before {
+      content: '\f086'; }
+    .post-details a.image:before {
+      content: '\f03e'; }
+    .post-details a.post-edit-link:before {
+      content: '\f044'; }
+    .post-details a[href$="prints"]:before {
+      content: '\f0d6'; }
+    .post-details a[href*="?offset="]:before {
+      content: '\f02e'; }
+.post-content {
+  word-wrap: break-word; }
+  .post-content img {
+    border-radius: .3rem;
+    max-width: 100%; }
+.post-footer {
+  border-bottom: thin solid #767676;
+  clear: both;
+  font-size: smaller;
+  margin: 0 0 1rem;
+  padding: 0 0 1rem; }
+  .post-footer span {
+    color: #767676;
+    padding: 0 0 0 1rem; }
+    .post-footer span:first-child {
+      padding: 0; }
+    .post-footer span:before {
+      font: 100%/1 awesome;
+      padding: 0 .3rem 0 0; }
+    .post-footer span.post-categories:before {
+      content: '\f07c'; }
+    .post-footer span.post-tags:before {
+      content: '\f02b'; }
+    .post-footer span.webcomic-collections:before {
+      content: '\f1c5'; }
+    .post-footer span.webcomic-storylines:before {
+      content: '\f02d'; }
+    .post-footer span.webcomic-characters:before {
+      content: '\f0c0'; }
+
+.attachment .post-image,
+.webcomic-prints .post-image {
+  float: none;
+  margin: 0;
+  text-align: center; }
+  .attachment .post-image img,
+  .webcomic-prints .post-image img {
+    border-radius: .3rem; }
+.attachment .post-excerpt,
+.webcomic-prints .post-excerpt {
+  font-size: smaller;
+  text-align: center; }
+.attachment .webcomic-print-form,
+.webcomic-prints .webcomic-print-form {
+  display: inline-block;
+  margin: 0 1rem 1rem 0; }
+
+.more-link:after {
+  font: 100%/1 awesome;
+  content: '\f138'; }
+
+nav.post-navigation, nav.posts-navigation, nav.image-navigation, nav.comment-navigation {
+  clear: both;
+  margin: 1rem 0; }
+  nav.post-navigation:before, nav.post-navigation:after, nav.posts-navigation:before, nav.posts-navigation:after, nav.image-navigation:before, nav.image-navigation:after, nav.comment-navigation:before, nav.comment-navigation:after {
+    content: ' ';
+    display: table; }
+  nav.post-navigation:after, nav.posts-navigation:after, nav.image-navigation:after, nav.comment-navigation:after {
+    clear: both; }
+  nav.post-navigation .nav-previous, nav.posts-navigation .nav-previous, nav.image-navigation .nav-previous, nav.comment-navigation .nav-previous {
+    float: left; }
+  nav.post-navigation .nav-next, nav.posts-navigation .nav-next, nav.image-navigation .nav-next, nav.comment-navigation .nav-next {
+    float: right; }
+  nav.post-navigation img, nav.posts-navigation img, nav.image-navigation img, nav.comment-navigation img {
+    margin: 0 0 1rem;
+    transition: opacity .2s; }
+  nav.post-navigation a:focus img,
+  nav.post-navigation a:hover img, nav.posts-navigation a:focus img,
+  nav.posts-navigation a:hover img, nav.image-navigation a:focus img,
+  nav.image-navigation a:hover img, nav.comment-navigation a:focus img,
+  nav.comment-navigation a:hover img {
+    opacity: 0.8; }
+nav.pagination {
+  clear: both;
+  color: #767676;
+  margin: 1rem 0;
+  text-align: center; }
+  nav.pagination a,
+  nav.pagination .current {
+    display: inline-block;
+    padding: 0 .3rem; }
+  nav.pagination.post .nav-links:before {
+    font: 100%/1 awesome;
+    content: '\f0c5';
+    padding: 0 .3rem 0 0; }
+
+.webcomic-prints div {
+  margin: 0 0 1rem; }
+
+.search .page-header h1:before, .archive .page-header h1:before {
+  font: 100%/1 awesome;
+  content: '\f187';
+  padding: 0 .5rem 0 0; }
+.search .page-header h1:before {
+  content: '\f002'; }
+.archive.author .page-header h1:before {
+  content: '\f007'; }
+.archive.category .page-header h1:before {
+  content: '\f07c'; }
+.archive.date .page-header h1:before {
+  content: '\f133'; }
+.archive.tag .page-header h1:before, .archive.taxonomy .page-header h1:before {
+  content: '\f02b'; }
+.archive.post-type-archive-webcomic .page-header h1:before {
+  content: '\f1c5'; }
+.archive.tax-webcomic_storyline .page-header h1:before {
+  content: '\f02d'; }
+.archive.tax-webcomic_character .page-header h1:before {
+  content: '\f0c0'; }
+.page-image {
+  float: left;
+  margin: 0 1rem 1rem 0; }
+  .page-image img {
+    border-radius: .3rem; }
+.page-content {
+  word-wrap: break-word; }
+  .page-content img {
+    border-radius: .3rem; }
+.page-template-templatefull-width-php main {
+  -moz-order: 1;
+  -ms-order: 1;
+  -o-order: 1;
+  -webkit-order: 1;
+  order: 1; }
+.page-template-templatefull-width-php main,
+.page-template-templatefull-width-php .sidebar1,
+.page-template-templatefull-width-php .sidebar2,
+.page-template-templatefull-width-php .sidebar3 {
+  width: 100%; }
+
+.contributor {
+  margin: 0 0 1rem; }
+  .contributor:before, .contributor:after {
+    content: ' ';
+    display: table; }
+  .contributor:after {
+    clear: both; }
+  .contributor h2 {
+    margin: 0; }
+  .contributor-image {
+    float: left;
+    margin: 0 1rem 1rem 0; }
+    .contributor-image img {
+      border-radius: .3rem; }
+
+.comment, .pingback,
+.trackback {
+  border-bottom: thin solid #767676;
+  margin: 0 0 1rem;
+  padding: 1rem; }
+  .comment-reply-title a {
+    font-weight: normal; }
+    .comment-reply-title a:before {
+      font: 100%/1 awesome;
+      content: '\f057';
+      padding: 0 .3rem 0 0; }
+  .comment-form label, .webcomic-transcribe-form label {
+    display: block; }
+  .comment-form .required, .webcomic-transcribe-form .required {
+    visibility: hidden; }
+    .comment-form .required:before, .webcomic-transcribe-form .required:before {
+      font: 100%/1 awesome;
+      content: '\f069';
+      visibility: visible; }
+  .comment-footer img {
+    border-radius: 100rem;
+    margin: 0 1rem 0 0; }
+  .comment-footer a {
+    margin: 0 0 0 1rem; }
+    .comment-footer a.url {
+      margin: 0; }
+    .comment-footer a:before {
+      font: 100%/1 awesome;
+      padding: 0 .3rem 0 0; }
+    .comment-footer a.time:before {
+      content: '\f133'; }
+    .comment-footer a.comment-edit-link:before {
+      content: '\f044'; }
+    .comment-footer a.comment-reply-link:before {
+      content: '\f112'; }
+  .comment .comment, .pingback .comment,
+  .trackback .comment, .comment .pingback, .pingback .pingback,
+  .trackback .pingback,
+  .comment .trackback,
+  .pingback .trackback,
+  .trackback .trackback {
+    border: 0;
+    border-left: thin solid #767676;
+    margin: 0 0 0 1rem;
+    padding: 1rem; }
+
+.moderating-comment {
+  font-size: smaller;
+  font-style: italic;
+  margin: 1rem 0; }
+
+.webcomic-transcript-error,
+.webcomic-transcript-success {
+  font-size: smaller;
+  font-style: italic;
+  margin: 1rem 0 0; }
+
+.webcomic-transcript-authors:before {
+  font: 100%/1 awesome;
+  content: '\f007';
+  padding: 0 .3rem 0 1rem; }
+
+.webcomic-transcript-languages:before {
+  font: 100%/1 awesome;
+  content: '\f1ab';
+  padding: 0 .3rem 0 1rem; }
+
+.sticky {
+  /* . */ }
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.bypostauthor {
+  border: thin solid #767676; }
+
+.alignnone {
+  margin: 1rem 0; }
+.aligncenter {
+  display: block;
+  margin: 0 auto 1rem; }
+.alignright {
+  float: right;
+  margin: 0 0 1rem 1rem; }
+.alignleft {
+  float: left;
+  margin: 0 1rem 1rem 0; }
+
+.wp-audio-shortcode {
+  margin: 1rem 0; }
+.wp-caption {
+  max-width: 100%;
+  padding: .3rem;
+  text-align: center; }
+  .wp-caption img {
+    border-radius: .3rem; }
+  .wp-caption-text {
+    font-size: smaller;
+    margin: .5rem 0 0; }
+
+.gallery {
+  margin: auto;
+  padding: .3rem; }
+  .gallery:before, .gallery:after {
+    content: ' ';
+    display: table; }
+  .gallery:after {
+    clear: both; }
+  .gallery-item {
+    display: inline-block;
+    margin: 0;
+    padding: .3rem;
+    text-align: center;
+    vertical-align: top; }
+    .gallery-columns-1 .gallery-item {
+      display: block; }
+    .gallery-columns-2 .gallery-item {
+      width: 50%; }
+    .gallery-columns-3 .gallery-item {
+      width: 33%; }
+    .gallery-columns-4 .gallery-item {
+      width: 25%; }
+    .gallery-columns-5 .gallery-item {
+      width: 20%; }
+    .gallery-columns-6 .gallery-item {
+      width: 16%; }
+    .gallery-columns-7 .gallery-item {
+      width: 14%; }
+    .gallery-columns-8 .gallery-item {
+      width: 12%; }
+    .gallery-columns-9 .gallery-item {
+      width: 11%; }
+    .gallery-columns-10 .gallery-item {
+      width: 10%; }
+  .gallery-icon {
+    line-height: 1; }
+    .gallery-icon img {
+      border-radius: .3rem;
+      transition: opacity .2s; }
+    .gallery-icon a:focus img,
+    .gallery-icon a:hover img {
+      opacity: 0.8; }
+  .gallery-caption {
+    font-size: smaller;
+    margin: .5rem 0 0; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,55 @@
+<article class="list__item post clearfix">
+	{{- if .Params.thumbnail }}
+	<figure class="list__thumbnail">
+		<a href="{{ .Permalink }}">
+			<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}" />
+		</a>
+	</figure>
+	{{- end }}
+	<div class="list__content clearfix">
+		<header class="post-header">
+				<h2><a href="{{ .RelPermalink }}" rel="bookmark">{{ .Title }}</a></h2>
+				{{- if not .Date.IsZero }}
+				<div class="post-details">
+				<a rel="bookmark">
+					<time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "2006-01-02" }}</time>
+				</a>
+				{{- if ne .Date .Lastmod }}
+				<a rel="bookmark">
+					<time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05" }}">(Last Modified: {{.Lastmod.Format ( .Site.Params.dateformat | default "January 02, 2006")}})</time>
+				</a>
+				{{- end }}
+				</div>
+				{{- end }}
+		</header><!-- .post-header -->
+
+		<div class="post-excerpt"><p>
+			{{ .Summary }} 
+
+			{{- if .Site.Params.readmore }}
+			{{- if .Truncated }}
+			<a href="{{ .RelPermalink }}" class="more-link">Read more </a>
+			{{- end }}
+			{{- end }}
+		</p></div>
+	</div>
+	
+	<footer class="post-footer">
+			{{ with .Params.categories }}
+		<span class="post-categories">
+			{{ range . }}
+			<a href="{{ " categories " | absURL}}{{ . | urlize }}" rel="tag">{{ . }}</a>
+			{{ end }}
+		</span>
+		{{ end }}
+
+		{{ with .Params.tags }}
+		<span class="post-tags">
+			{{ range . }}
+			<a href="{{ " tags " | absURL }}{{ . | urlize }}" rel="tag">{{ . }}</a>
+			{{ end }}
+		</span>
+		{{ end }}
+	</footer>
+
+</article>
