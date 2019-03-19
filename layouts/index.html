@@ -13,9 +13,34 @@
   </div>
   <div>
     <!-- Note that .Pages is the same as .Site.RegularPages on the homepage template. -->
-    {{ range first 10 .Pages }}
+    {{ range .Paginator.Pages }}
         {{ .Render "summary"}}
     {{ end }}
   </div>
+
+{{ if gt .Paginator.TotalPages 1 }}
+{{ $current := .Paginator.PageNumber }}
+<div class="nav-links">
+<ul class="pagination">
+    {{ with .Paginator.First }}
+        <a href="{{ .URL }}" aria-label="First"><span aria-hidden="true">&laquo;</span></a>
+    {{ end }}
+
+    <a href="{{ if .Paginator.HasPrev }}{{ .Paginator.Prev.URL }}{{ end }}" aria-label="Previous"><span aria-hidden="true">Previous Page</span></a>
+    {{ range .Paginator.Pagers }}
+    {{ if eq $current .PageNumber }}
+    <span href="{{ .URL }}">{{ .PageNumber }}</a>
+    {{ else }}
+    <a href="{{ .URL }}">{{ .PageNumber }}</a>
+    {{ end }}
+    {{ end }}
+    <a href="{{ if .Paginator.HasNext }}{{ .Paginator.Next.URL }}{{ end }}" aria-label="Next"><span aria-hidden="true">Next Page</span></a>
+    {{ with .Paginator.Last }}
+    <a href="{{ .URL }}" aria-label="Last"><span aria-hidden="true">&raquo;</span></a>
+    {{ end }}
+</ul>
+</div>
+{{ end }}
 </main>
+
 {{ end }}
