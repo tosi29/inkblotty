@@ -15,6 +15,10 @@ googleAnalytics = ""
 
 summaryLength=150
 
+[permalinks]
+  post = "/:slug/"
+  page = "/:slug/"
+
 [taxonomies]
   tag = "tags"
   category = "categories"
