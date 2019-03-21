@@ -101,6 +101,10 @@ h1 {
     font-size: 1.5em;
 }
 
+iframe {
+    vertical-align: bottom;
+}
+
 @media screen and (max-width: 40em) {
     div .nav-previous {
         display: none;
