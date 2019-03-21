@@ -6,6 +6,7 @@ description = "Guide to emoji usage in Hugo"
 tags = [
     "emoji",
 ]
+archives = "2019-03"
 emoji = "<span class='nowrap'> :orc: <code>:orc:</code></span><span class='nowrap'> :v_paw_fk1: <code>:v_paw_fk1:</code></span><span class='nowrap'> :cannabis_leaf: <code>:cannabis_leaf:</code></span>"
 +++
 

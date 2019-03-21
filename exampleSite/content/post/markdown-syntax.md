@@ -13,6 +13,7 @@ categories = [
     "themes",
     "syntax",
 ]
+archives = "2019-03"
 series = ["Themes Guide"]
 aliases = ["migrate-from-jekyl"]
 +++

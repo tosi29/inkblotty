@@ -15,6 +15,11 @@ googleAnalytics = ""
 
 summaryLength=150
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  archive = "archives"
+
 [[menu.main]]
   identifier = "about"
   name = "About"

@@ -35,8 +35,8 @@
     <aside class="widget widget_archive">
         <h2>Archives</h2>
         <ul>
-            {{- range $name, $items := .Site.Taxonomies.yearmonth -}}
-            <li><a href='{{- "month/" | relLangURL -}}{{- $name | urlize | lower -}}'>{{ $name | title }}</a> ({{ $items.Count }})</li>
+            {{- range $name, $items := .Site.Taxonomies.archives -}}
+            <li><a href="{{- "archives/" | relLangURL -}}{{- $name | urlize | lower -}}">{{ $name | title }}</a> ({{ $items.Count }})</li>
             {{- end }}
         </ul>
     </aside>
