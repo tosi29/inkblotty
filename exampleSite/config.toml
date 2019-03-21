@@ -11,6 +11,7 @@ enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
 disqusShortname = ""
+googleAnalytics = ""
 
 summaryLength=150
 
