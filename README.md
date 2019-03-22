@@ -1,6 +1,8 @@
 # Inkblotty
 Inkblotty is a Hugo theme based on [Inkblot](https://github.com/mgsisk/inkblot).  
 
+[Demo](https://clever-visvesvaraya-e41cfa.netlify.com/)
+
 ## Features
 
 - Article
