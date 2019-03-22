@@ -3,9 +3,9 @@ license = "GPLv3"
 licenselink = "https://github.com/tosi29/inkblotty/blob/master/LICENSE"
 description = "Responsive Hugo theme based on Inkblot of WordPress theme"
 homepage = "https://github.com/tosi29/inkblotty/"
-tags = ["blog", "responsive", "wordpress"]
-features = ["blog", "responsive", "wordpress"]
-min_version = "0.41"
+tags = ["blog", "responsive", "wordpress", "disqus", "google analytics"]
+features = ["blog", "responsive", "wordpress", "disqus", "google analytics"]
+min_version = "0.54"
 
 [author]
   name = "tosi"
