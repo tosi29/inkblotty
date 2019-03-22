@@ -6,7 +6,7 @@
     {{ else }}
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
     {{ end }}
-    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small">
+    <div class="fb-share-button" data-href="{{ .Permalink }}" data-layout="button_count" data-size="small">
         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" class="fb-xfbml-parse-ignore">Share</a>
     </div>
 
