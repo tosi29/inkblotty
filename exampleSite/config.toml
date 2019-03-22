@@ -33,4 +33,5 @@ summaryLength=150
 [Params]
   readmore = true
 
-
+[sitemap]
+  filename = "sitemap.xml"  # c.f. https://gohugo.io/templates/sitemap-template/#configure-sitemap-xml
