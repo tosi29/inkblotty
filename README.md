@@ -20,11 +20,11 @@ Inkblotty is a Hugo theme based on [Inkblot](https://github.com/mgsisk/inkblot).
 
 ## Installation
 1. Put theme directory into `themes` of your hugo site.
-  - Run git command in `themes` directory:
-    ```
-    git clone https://github.com/tosi29/inkblotty.git
-    ```
-  - Or, download and extract [zip file](https://github.com/tosi29/inkblotty/archive/master.zip), and put directory into `themes` directory as `inkblotty`.
+   - Run git command in `themes` directory:
+     ```
+     git clone https://github.com/tosi29/inkblotty.git
+     ```
+   - Or, download and extract [zip file](https://github.com/tosi29/inkblotty/archive/master.zip), and put directory into `themes` directory as `inkblotty`.
 
 2. Edit `config.toml` of your hugo site.
 
