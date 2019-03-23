@@ -18,7 +18,7 @@ Inkblotty is a Hugo theme based on [Inkblot](https://github.com/mgsisk/inkblot).
   - Archives
 - Others
   - Google Analytics
-
+  
 
 ## Installation
 1. Put theme directory into `themes` of your hugo site.
