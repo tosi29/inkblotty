@@ -33,5 +33,12 @@ summaryLength=150
 [Params]
   readmore = true
 
+[outputs]                          # c.f. https://gohugo.io/templates/output-formats/
+  home = ["HTML", "RSS"]
+  page =  ["HTML"]
+  section =  ["HTML", "RSS"]
+  taxonomyTerm =  ["HTML", "RSS"]
+  taxonomy =  ["HTML", "RSS"]
+
 [sitemap]
   filename = "sitemap.xml"  # c.f. https://gohugo.io/templates/sitemap-template/#configure-sitemap-xml
