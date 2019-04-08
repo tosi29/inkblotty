@@ -5,6 +5,7 @@ Inkblotty is a Hugo theme based on [Inkblot](https://github.com/mgsisk/inkblot).
 
 ## Features
 
+- Responsive Design
 - Article
   - Share Button (Facebook, Twitter, Hatena Bookmark)
   - Comment form (Disqus)
