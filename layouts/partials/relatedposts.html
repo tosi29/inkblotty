@@ -1,6 +1,6 @@
 {{ $related := .Site.RegularPages.Related . | first 7 }}
 {{ with $related }}
-<h4>Related Posts</h4>
+<h4>{{ T "related_posts_title" }}</h4>
 <ol style="margin-left: 30px; list-style-type: decimal;">
 	{{ range . }}
 	<li><strong><a href="{{ .RelPermalink }}">{{ .Title }}</a></strong></li>

@@ -1,0 +1,16 @@
+
+
+- id: related_posts_title
+  translation: 関連記事
+
+- id: categories_title
+  translation: カテゴリ
+
+- id: tags_title
+  translation: タグ
+
+- id: recent_posts_title
+  translation: 最近の投稿
+
+- id: archives_title
+  translation: アーカイブ

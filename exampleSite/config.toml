@@ -4,7 +4,7 @@ author = "Author"
 paginate = 10
 
 languageCode = "en-us"
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "en-us"
 hasCJKLanguage = "true"
 
 enableInlineShortcodes = true
