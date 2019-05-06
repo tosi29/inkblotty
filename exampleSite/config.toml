@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://example.com"
 title = "Inkblotty"
 author = "Author"
 paginate = 10
