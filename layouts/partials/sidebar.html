@@ -36,7 +36,7 @@
         <h2>{{ T "archives_title" }}</h2>
         <ul>
             {{- range $name, $items := .Site.Taxonomies.archives -}}
-            <li><a href="{{- "archives/" | relLangURL -}}{{- $name | urlize | lower -}}">{{ $name | title }}</a> ({{ $items.Count }})</li>
+            <li><a href="{{- "archives/" | relLangURL -}}{{- $name | urlize | lower -}}">{{ $name | title }} ({{ $items.Count }})</a></li>
             {{- end }}
         </ul>
     </aside>
