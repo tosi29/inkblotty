@@ -1,6 +1,7 @@
 baseURL = "https://example.com"
 title = "Inkblotty"
 author = "Author"
+theme = "inkblotty"
 paginate = 10
 
 languageCode = "en-us"
