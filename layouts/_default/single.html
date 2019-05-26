@@ -22,7 +22,7 @@
         </div>
 
         <footer class="post-footer">
-                {{ with .Params.categories }}
+            {{ with .Params.categories }}
             <span class="post-categories">
                 {{ range . }}
                 <a href="{{- "categories/" | absURL -}}{{- . | urlize -}}" rel="tag">{{ . }}</a>
