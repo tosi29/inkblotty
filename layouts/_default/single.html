@@ -10,7 +10,7 @@
                 </a>
 				{{- if ne .Date .Lastmod }}
 				<a rel="bookmark">
-					<time datetime="{{ .Lastmod.Format "2006-01-02T12:34:56" }}">(Last Modified: {{.Lastmod.Format ( .Site.Params.dateformat | default "January 02, 2006")}})</time>
+					<time datetime="{{ .Lastmod.Format "2006-01-02T12:34:56" }}">(Last Modified: {{.Lastmod.Format ( .Site.Params.dateformat | default "2006-01-02")}})</time>
 				</a>
                 {{- end }}
 				{{ partial "share.html" . }}
