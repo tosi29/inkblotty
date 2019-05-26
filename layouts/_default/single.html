@@ -25,7 +25,7 @@
             {{ with .Params.categories }}
             <span class="post-categories">
                 {{ range . }}
-                <a href="{{- "categories/" | absURL -}}{{- . | urlize -}}" rel="tag">{{ . }}</a>
+                <a href="{{- "/categories/" | absURL -}}{{- . | urlize -}}" rel="tag">{{ . }}</a>
                 {{ end }}
             </span>
             {{ end }}
@@ -33,7 +33,7 @@
             {{ with .Params.tags }}
             <span class="post-tags">
                 {{ range . }}
-                <a href="{{- "tags/" | absURL -}}{{- . | urlize -}}" rel="tag">{{ . }}</a>
+                <a href="{{- "/tags/" | absURL -}}{{- . | urlize -}}" rel="tag">{{ . }}</a>
                 {{ end }}
             </span>
             {{ end }}
