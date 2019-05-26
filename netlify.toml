@@ -1,0 +1,7 @@
+[build]
+  command = "hugo -c ./exampleSite/content/ --config ./exampleSite/config.toml --baseURL https://clever-visvesvaraya-e41cfa.netlify.com/ -t ''"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.56"
+  HUGO_ENABLEGITINFO = "true"
