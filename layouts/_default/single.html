@@ -33,7 +33,7 @@
             {{ with .Params.tags }}
             <span class="post-tags">
                 {{ range . }}
-                <a href="{{- "/tags/" | absURL -}}{{- . | urlize -}}" rel="tag">{{ . }}</a>
+                <a href="{{- "/tags/" | absURL -}}{{- . | urlize -}}" rel="tag">{{ . }}</a>&emsp;
                 {{ end }}
             </span>
             {{ end }}
