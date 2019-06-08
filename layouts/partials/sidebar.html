@@ -16,7 +16,7 @@
         <h2>{{ T "tags_title" }}</h2>
         <div class="tagcloud">
             {{- range $name, $items := .Site.Taxonomies.tags -}}
-            <a class="tag-cloud-link" href="{{- "tags/" | relLangURL -}}{{- $name | urlize | lower -}}" title="{{ $name }}" style="font-size: 12pt;">{{ .Page.Title }} </a>
+            <a class="tag-cloud-link" href="{{- "tags/" | relLangURL -}}{{- $name | urlize | lower -}}" title="{{ $name }}" style="font-size: 12pt;">{{ .Page.Title }}</a>&emsp;
             {{- end }}
         </div>
     </aside>
