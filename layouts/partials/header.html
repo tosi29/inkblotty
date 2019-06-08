@@ -12,7 +12,7 @@
                 {{- $currentNode := . }}
                 {{- range sort .Site.Menus.main }}
                 {{- if .Name}}
-                <li class="menu-item {{if eq $currentNode.Params.url .URL }} current-menu-item current_page_item {{end}}"><a class="menu__link" href="{{ .URL }}">{{ .Name | upper }}</a></li>
+                <li class="menu-item {{if eq ($.Permalink|absURL) (.URL|absURL) }} current-menu-item current_page_item {{end}}"><a class="menu__link" href="{{ .URL }}">{{ .Name | upper }}</a></li>
                 {{- end }}
                 {{- end }}
             </ul>
@@ -20,7 +20,7 @@
                 {{- $currentNode := . }}
                 {{- range sort .Site.Menus.main }}
                 {{- if .Name}}
-                <option value="{{ .URL }}" class="menu-item menu-item-type-custom menu-item-object-custom" {{if eq $currentNode.Params.url .URL }} selected="selected" {{end}}>{{ .Name | upper }}</option>
+                <option value="{{ .URL }}" class="menu-item menu-item-type-custom menu-item-object-custom" {{if eq ($.Permalink|absURL) (.URL|absURL) }} selected="selected" {{end}}>{{ .Name | upper }}</option>
                 {{- end }}
                 {{- end }}
             </select>
