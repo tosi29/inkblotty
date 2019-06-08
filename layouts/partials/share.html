@@ -9,10 +9,10 @@
     <div class="fb-share-button" data-href="{{ .Permalink }}" data-layout="button_count" data-size="small">
         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" class="fb-xfbml-parse-ignore">Share</a>
     </div>
-
+    &nbsp;
     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="{{ .Title }}" data-url="{{ .Permalink }}" data-show-count="false">Tweet</a>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+    &nbsp;
     {{ if eq .Site.LanguageCode "ja" }}
     <a href="http://b.hatena.ne.jp/add?mode=confirm&url={{ .Permalink }}&title={{ .Title }}" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-counter">
         <img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" width="20" height="20" style="border: none;" />
