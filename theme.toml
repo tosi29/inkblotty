@@ -5,7 +5,7 @@ description = "Responsive Hugo theme based on Inkblot of WordPress theme"
 homepage = "https://github.com/tosi29/inkblotty/"
 tags = ["blog", "responsive", "wordpress", "disqus", "google analytics"]
 features = ["blog", "responsive", "wordpress", "disqus", "google analytics"]
-min_version = "0.55"
+min_version = "0.58"
 
 [author]
   name = "tosi"

@@ -1,6 +1,6 @@
 
 {{ define "main" }}
-{{ $paginator := .Paginate ( where .Pages "Type" "post" ) 10 }}
+{{ $paginator := .Paginate ( where .Site.RegularPages "Type" "post" ) 10 }}
 <main aria-role="main">
   <header class="homepage-header">
     <h1>{{.Title}}</h1>
