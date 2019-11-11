@@ -6,7 +6,7 @@
         <ul class="widget__list">
             {{- range $name, $items := .Site.Taxonomies.categories -}}
             <li class="cat-item cat-item-2">
-                <a href="{{- "categories/" | relLangURL -}}{{- $name | urlize | lower -}}">{{ .Page.Title }} ({{ $items.Count }})</a>
+                <a href="{{- .Page.Permalink -}}">{{ .Page.Title }} ({{ $items.Count }})</a>
             </li>
             {{- end }}
         </ul>
@@ -16,7 +16,7 @@
         <h2>{{ T "tags_title" }}</h2>
         <div class="tagcloud">
             {{- range $name, $items := .Site.Taxonomies.tags -}}
-            <a class="tag-cloud-link" href="{{- "tags/" | relLangURL -}}{{- $name | urlize | lower -}}" title="{{ $name }}" style="font-size: 12pt;">{{ .Page.Title }}</a>&emsp;
+            <a class="tag-cloud-link" href="{{- .Page.Permalink -}}" title="{{ $name }}" style="font-size: 12pt;">{{ .Page.Title }}</a>&emsp;
             {{- end }}
         </div>
     </aside>
@@ -37,7 +37,7 @@
         <h2>{{ T "archives_title" }}</h2>
         <ul>
             {{- range $name, $items := .Site.Taxonomies.archives -}}
-            <li><a href="{{- "archives/" | relLangURL -}}{{- $name | urlize | lower -}}">{{ .Page.Title }} ({{ $items.Count }})</a></li>
+            <li><a href="{{- .Page.Permalink -}}">{{ .Page.Title }} ({{ $items.Count }})</a></li>
             {{- end }}
         </ul>
     </aside>
