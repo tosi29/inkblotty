@@ -35,23 +35,29 @@
 	</div>
 	
 	<footer class="post-footer">
+		{{ $categories := .Params.categories }}
+		{{ $all_categories := .Site.Taxonomies.categories }}
+		{{ with $categories }}
 		<span class="post-categories">
-			{{ $categories := .Params.categories }}
-			{{- range $items := .Site.Taxonomies.categories -}}
+			{{- range $all_categories -}}
 				{{ if in $categories .Page.Title }}
 				<a href="{{- .Page.Permalink -}}">{{ .Page.Title }}</a>&emsp;
 				{{ end }}
 			{{- end }}
 		</span>
+		{{ end }}
 
+		{{ $tags := .Params.tags }}
+		{{ $all_tags := .Site.Taxonomies.tags }}
+		{{ with $tags }}
 		<span class="post-tags">
-			{{ $tags := .Params.tags }}
-			{{- range $items := .Site.Taxonomies.tags -}}
+			{{- range $all_tags -}}
 				{{ if in $tags .Page.Title }}
 				<a href="{{- .Page.Permalink -}}">{{ .Page.Title }}</a>&emsp;
 				{{ end }}
 			{{- end }}
 		</span>
+		{{ end }}
 	</footer>
 
 </article>
