@@ -35,21 +35,23 @@
 	</div>
 	
 	<footer class="post-footer">
-			{{ with .Params.categories }}
 		<span class="post-categories">
-			{{ range . }}
-			<a href="{{ "/categories/" | absURL}}{{ . | urlize }}" rel="tag">{{ . }}</a>
-			{{ end }}
+			{{ $categories := .Params.categories }}
+			{{- range $items := .Site.Taxonomies.categories -}}
+				{{ if in $categories .Page.Title }}
+				<a href="{{- .Page.Permalink -}}">{{ .Page.Title }}</a>&emsp;
+				{{ end }}
+			{{- end }}
 		</span>
-		{{ end }}
 
-		{{ with .Params.tags }}
 		<span class="post-tags">
-			{{ range . }}
-			<a href="{{ "/tags/" | absURL }}{{ . | urlize }}" rel="tag">{{ . }}</a>
-			{{ end }}
+			{{ $tags := .Params.tags }}
+			{{- range $items := .Site.Taxonomies.tags -}}
+				{{ if in $tags .Page.Title }}
+				<a href="{{- .Page.Permalink -}}">{{ .Page.Title }}</a>&emsp;
+				{{ end }}
+			{{- end }}
 		</span>
-		{{ end }}
 	</footer>
 
 </article>
