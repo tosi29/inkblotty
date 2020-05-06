@@ -15,6 +15,7 @@ disqusShortname = ""
 googleAnalytics = ""
 
 summaryLength=150
+uglyurls = true
 
 [permalinks]
   post = "/:slug/"
