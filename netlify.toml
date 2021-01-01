@@ -1,5 +1,5 @@
 [build]
-  command = "hugo -c ./exampleSite/content/ --config ./exampleSite/config.toml --baseURL https://hugo-theme-inkblotty.netlify.com -t ''"
+  command = "hugo -c ./exampleSite/content/ --config ./exampleSite/config.toml --baseURL https://clever-visvesvaraya-e41cfa.netlify.com/ -t ''"
   publish = "public"
 
 [build.environment]
