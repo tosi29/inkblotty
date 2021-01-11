@@ -14,7 +14,7 @@ categories = [
     "syntax",
 ]
 archives = "2019/03"
-series = ["Themes Guide"]
+#series = ["Themes Guide"]
 aliases = ["migrate-from-jekyl"]
 +++
 
