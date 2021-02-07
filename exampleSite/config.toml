@@ -16,6 +16,9 @@ googleAnalytics = ""
 
 summaryLength=150
 
+pygmentsUseClasses = true
+pygmentsCodefences = true
+
 [permalinks]
   post = "/:slug/"
   page = "/:slug/"
