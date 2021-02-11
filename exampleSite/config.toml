@@ -46,3 +46,9 @@ pygmentsCodefences = true
 
 [sitemap]
   filename = "sitemap.xml"  # c.f. https://gohugo.io/templates/sitemap-template/#configure-sitemap-xml
+
+[markup] 
+  [markup.tableOfContents]  # c.f. https://gohugo.io/getting-started/configuration-markup/#table-of-contents
+    startLevel = 2
+    endLevel = 3
+    ordered = false
