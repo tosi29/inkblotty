@@ -1,0 +1,12 @@
+<div class="toc-box">
+<div class="toc-label">
+{{ if eq .Site.LanguageCode "ja" }}
+    {{ printf "目次"}}
+{{ else }}
+    {{ printf "Contents"}}
+{{ end }}
+</div>
+<div class="toc-chapter">
+{{- .Page.TableOfContents -}}
+</div>
+</div>

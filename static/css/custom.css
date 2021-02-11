@@ -71,22 +71,6 @@ nav.pagination .current {
     color: #000000;
 }
 
-.post-content h2 {
-    border-left: 6px solid #ff6347;
-    border-bottom: 1px solid #d1d1d1;
-    padding-left: 4px;
-}
-
-.post-content h3 {
-    border-left: 4px solid #4169e1;
-    border-bottom: 1px solid #d1d1d1;
-    padding-left: 6px;
-}
-
-.post-content h4 {
-    padding-left: 0px;
-}
-
 div.breadcrumbs {
     font-size: 80%;
     padding: 20px 0 0 20px;
@@ -117,3 +101,58 @@ iframe {
         display: none;
     }
 }
+
+.post-content h1 {
+    border-left: 8px solid #ff6347;
+    border-bottom: 1px solid #d1d1d1;
+    padding-left: 4px;
+}
+
+.post-content h2 {
+    border-left: 6px solid #4169e1;
+    border-bottom: 1px solid #d1d1d1;
+    padding-left: 6px;
+}
+
+.post-content h3 {
+    border-left: 4px solid #000000;
+    border-bottom: 1px solid #d1d1d1;
+    padding-left: 8px;
+}
+
+.post-content h4 {
+    padding-left: 0px;
+}
+
+/* Table of Contents Style */
+
+.toc-box{
+    border: 1px solid #000000;
+    padding: 1em;
+    width:max-content;
+    font-size: 95%;
+}
+
+.toc-label{
+    text-align: center;
+    margin-top: 0px;
+    padding: 0px 6px 0 6px;
+    font-weight: bold;
+}
+
+.toc-chapter #TableOfContents ul > li  {
+    display: block;
+    text-align: left;
+    list-style-type: none;
+}
+
+.toc-chapter #TableOfContents ul >li >ul >li {
+    padding-left: 1em;
+    list-style-type: none;
+}
+
+.toc-chapter #TableOfContents ul >li >ul >li >ul >li {
+    padding-left: 1em;
+    list-style-type: none;
+}
+
