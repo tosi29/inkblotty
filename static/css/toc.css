@@ -1,0 +1,31 @@
+/* Table of Contents Style */
+
+.toc-box{
+    border: 1px solid #000000;
+    padding: 1em;
+    width:max-content;
+    font-size: 95%;
+}
+
+.toc-label{
+    text-align: center;
+    margin-top: 0px;
+    padding: 0px 6px 0 6px;
+    font-weight: bold;
+}
+
+.toc-chapter #TableOfContents ul > li  {
+    display: block;
+    text-align: left;
+    list-style-type: none;
+}
+
+.toc-chapter #TableOfContents ul >li >ul >li {
+    padding-left: 1em;
+    list-style-type: none;
+}
+
+.toc-chapter #TableOfContents ul >li >ul >li >ul >li {
+    padding-left: 1em;
+    list-style-type: none;
+}
