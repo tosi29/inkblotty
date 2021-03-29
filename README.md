@@ -10,6 +10,7 @@ Inkblotty is a Hugo theme based on [Inkblot](https://github.com/mgsisk/inkblot).
   - Share Button (Facebook, Twitter, Hatena Bookmark)
   - Comment form (Disqus)
   - Related Posts
+  - Table of Contents by shortcode
 - Article list
   - Summarize and Readmore
 - Sidebar
@@ -34,4 +35,26 @@ Inkblotty is a Hugo theme based on [Inkblot](https://github.com/mgsisk/inkblot).
 2. Edit `config.toml` of your hugo site.
 
 ## Configuration
+### Sample configuration file
 [exampleSite/config.toml](https://github.com/tosi29/inkblotty/blob/master/exampleSite/config.toml) is for reference.
+
+### Table of Contents
+This theme has shortcode to create Table of Contents.  
+To insert Table of Contents, write the following code in markdown.
+```
+{{< toc >}}
+```
+
+This is sample configuration of TOC in `config.toml`
+```
+[markup] 
+  	[markup.tableOfContents] 
+    	startLevel = 1
+    	endLevel = 3
+    	ordered = false
+```
+If you set `startLevel = 2`, `<h1>` tag is ignored.
+
+
+### Favicon
+Put `favicon.ico` file in `static` directory to set favicon.
