@@ -25,7 +25,7 @@
         <h2>{{ T "recent_posts_title" }}</h2>
         <ul>
             {{- $recent_articles_num := (.Site.Params.widgets.recent_articles_num | default 10) }}
-            {{- range first $recent_articles_num (where .Site.RegularPages "Section" "in" (.Site.Params.postSections | default (slice .Site.Params.directoryOfPostContents))) }}
+            {{- range first $recent_articles_num (where .Site.RegularPages "Section" "in" (.Site.Params.postSections | default (slice (.Site.Params.directoryOfPostContents | default "post")))) }}
             <li>
                 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             </li>
