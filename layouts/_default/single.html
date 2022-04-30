@@ -52,7 +52,7 @@
         {{ partial "relatedposts.html" . }}
     </article>
 
-    {{ if eq .Page.Type "post" }}
+    {{ if eq .Page.Type .Site.Params.directoryOfPostContents }}
     <nav class="navigation post-navigation" role="navigation">
         <div class="nav-links">
             <div class="nav-previous">
