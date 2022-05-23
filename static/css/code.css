@@ -1,3 +1,9 @@
+pre {
+    border: thin solid;
+    padding:0em;
+    word-wrap: normal;
+}
+
 pre.chroma {
     padding: 0em;
 }
