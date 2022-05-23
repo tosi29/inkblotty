@@ -51,6 +51,8 @@
         {{ partial "ad_double_rectangle.html" . }}
         {{ partial "relatedposts.html" . }}
     </article>
+    <script type="application/javascript" src='{{ "js/code.js" | relURL }}'></script>
+    <link rel='stylesheet' href='{{ "css/code.css" | relURL }}' type='text/css' media='all' />
 
     {{ if eq .Page.Type "post" }}
     <nav class="navigation post-navigation" role="navigation">
