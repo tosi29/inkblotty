@@ -24,6 +24,9 @@ Inkblotty is a Hugo theme based on [Inkblot](https://github.com/mgsisk/inkblot).
   - RSS
   - Opengraph / Twitter Card
 
+## Requirements
+- Hugo 0.81 or newer
+
 ## Installation
 1. Put theme directory into `themes` of your hugo site.
    - Run git command in `themes` directory:
@@ -58,3 +61,17 @@ If you set `startLevel = 2`, `<h1>` tag is ignored.
 
 ### Favicon
 Put `favicon.ico` file in `static` directory to set favicon.
+
+### Code block with title
+This theme provides the feature to display title in code block.
+
+
+    ```toml { fn="config.toml" }
+    title = "Inkblotty"
+    author = "Author"
+    theme = "inkblotty"
+    paginate = 10
+    ...
+    ```
+
+![Code](/images/codeblock.png)
