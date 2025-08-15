@@ -2,6 +2,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
     <title>{{ .Title }}{{ if ne .Title .Site.Title}} - {{ .Site.Title }}{{end}}</title>
+    <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "{{ .Site.Title }}",
+      "url" : {{ .Site.BaseURL }}
+    }
+    </script>
 
     <style type="text/css">
         img.wp-smiley,
