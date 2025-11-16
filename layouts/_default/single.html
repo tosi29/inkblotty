@@ -51,8 +51,7 @@
         {{ partial "ad_double_rectangle.html" . }}
         {{ partial "relatedposts.html" . }}
     </article>
-
-    {{ if eq .Page.Type "post" }}
+    {{ if eq .Page.Type (.Site.Params.directoryOfPostContents | default "post") }}
     <nav class="navigation post-navigation" role="navigation">
         <div class="nav-links">
             <div class="nav-previous">

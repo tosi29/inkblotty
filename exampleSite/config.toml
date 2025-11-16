@@ -36,6 +36,7 @@ pygmentsCodefences = true
 
 [Params]
   readmore = true
+  directoryOfPostContents = "post"
 
 [outputs]                          # c.f. https://gohugo.io/templates/output-formats/
   home = ["HTML", "RSS"]
