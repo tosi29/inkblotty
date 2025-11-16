@@ -50,10 +50,10 @@ There are two ways to show a table of contents:
 This is sample configuration of TOC in `config.toml`
 ```
 [markup]
-        [markup.tableOfContents]
-        startLevel = 1
-        endLevel = 3
-        ordered = false
+    [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 3
+    ordered = false
 ```
 If you set `startLevel = 2`, `<h1>` tag is ignored.
 
