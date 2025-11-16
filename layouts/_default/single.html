@@ -17,6 +17,10 @@
             </div>
         </header>
 
+        {{ if .Params.toc }}
+        {{ partial "toc.html" . }}
+        {{ end }}
+
         <div class="post-content">
             {{ .Content }}
         </div>

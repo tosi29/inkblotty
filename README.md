@@ -10,7 +10,7 @@ Inkblotty is a Hugo theme based on [Inkblot](https://github.com/mgsisk/inkblot).
   - Share Button (Facebook, Twitter, Hatena Bookmark)
   - Comment form (Disqus)
   - Related Posts
-  - Table of Contents by shortcode
+  - Table of Contents (front matter or shortcode)
 - Article list
   - Summarize and Readmore
 - Sidebar
@@ -39,19 +39,21 @@ Inkblotty is a Hugo theme based on [Inkblot](https://github.com/mgsisk/inkblot).
 [exampleSite/config.toml](https://github.com/tosi29/inkblotty/blob/master/exampleSite/config.toml) is for reference.
 
 ### Table of Contents
-This theme has shortcode to create Table of Contents.  
-To insert Table of Contents, write the following code in markdown.
-```
-{{< toc >}}
-```
+There are two ways to show a table of contents:
+
+- Set `toc: true` in the page front matter to automatically render the table of contents near the top of the article.
+- Insert the shortcode manually where you want the table of contents to appear:
+  ```
+  {{< toc >}}
+  ```
 
 This is sample configuration of TOC in `config.toml`
 ```
-[markup] 
-  	[markup.tableOfContents] 
-    	startLevel = 1
-    	endLevel = 3
-    	ordered = false
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 3
+    ordered = false
 ```
 If you set `startLevel = 2`, `<h1>` tag is ignored.
 
