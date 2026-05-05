@@ -34,7 +34,7 @@
                 <span class="post-categories">
                     {{- range $all_categories -}}
                         {{ if in $categories .Page.Title }}
-                        <a href="{{- .Page.Permalink -}}">{{ .Page.Title }}</a>&emsp;
+                        <a href="{{- .Page.RelPermalink -}}">{{ .Page.Title }}</a>&emsp;
                         {{ end }}
                     {{- end }}
                 </span>
@@ -46,7 +46,7 @@
                 <span class="post-tags">
                     {{- range $all_tags -}}
                         {{ if in $tags .Page.Title }}
-                        <a href="{{- .Page.Permalink -}}">{{ .Page.Title }}</a>&emsp;
+                        <a href="{{- .Page.RelPermalink -}}">{{ .Page.Title }}</a>&emsp;
                         {{ end }}
                     {{- end }}
                 </span>
@@ -61,12 +61,12 @@
         <div class="nav-links">
             <div class="nav-previous">
                 {{ with .PrevInSection }}
-                <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+                <a class="previous" href="{{.RelPermalink}}"> {{.Title}}</a>
                 {{ end }}
             </div>
             <div class="nav-next">
                 {{ with .NextInSection }}
-                <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+                <a class="next" href="{{.RelPermalink}}"> {{.Title}}</a>
                 {{ end }}
             </div>
         </div>
